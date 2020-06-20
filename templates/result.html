@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+	<head>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/results.css') }}">
+		<meta charset="utf-8">
+		<title>Movie Review Predictor</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+
+	<body>
+		<div class="bg-image">    
+        </div>
+
+		<!-- Website Title -->
+		<div id = "header">
+            <h1 class="Title">Movie Review Predictor</h1>
+            <h3 class="Title">A Web App Using Flask,deployed in Heroku</h3>
+        </div>
+        <div class="box">
+		<!-- Result -->
+			<div>
+				{% if prediction==1 %}
+					<img src="/static/images/download.png" style="margin-left: 240px; margin-top: 30px; border: 9px green solid">
+					<h1 style="margin-left: 30px;">Prediction: <span class='safe' style = "margin-left: 30px; color: #03fc1c;" >Great! You Gave a Positive Review...</span></h1>
+				{% elif prediction==0 %}
+				<img src="/static/images/red.png" style="margin-left: 240px; margin-top: 20px; border: 9px red solid">
+					<h1 style="margin-left: 30px;">Prediction: <span class='danger'>Oops! You Enterd a Negative Review.... </span></h1>
+				{% endif %}
+			</div>
+	    </div>
+	    <form action="/" , method="GET">
+	    <div id = "button">
+            <button class="glow-on-hover" type="submit">Try Another Review</button>
+        </div>
+        </form>
+		<!-- Footer -->
+        <div class="footer">
+            <h4>Made With <i class="fa fa-heart" aria-hidden="true" style="font-size:26px;color:red"></i> By Girish Mehra</h4>
+            <a href="https://www.github.com/girishmehra713/"><i class="fa fa-github" id = "styleIcon" style="font-size:36px; color: white;" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/girishmehra713/"><i class="fa fa-instagram" id = "styleIcon" style="font-size:36px; color: white;" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/in/girishmehra713/"><i class="fa fa-linkedin" id = "styleIcon" style="font-size:36px; color: white;" aria-hidden="true"></i></a>
+        </div>
+
+	</body>
+</html>
