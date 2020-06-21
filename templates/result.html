@@ -21,11 +21,11 @@
 		<!-- Result -->
 			<div>
 				{% if prediction==1 %}
-					<img src="/static/images/download.png" style="margin-left: 240px; margin-top: 30px; border: 9px green solid">
-					<h1 style="margin-left: 30px;">Prediction: <span class='safe' style = "margin-left: 30px; color: #03fc1c;" >Great! You Gave a Positive Review...</span></h1>
+					<img src="/static/images/download.png" class = "smiley">
+					<h1 style="margin-left: 20px;">Prediction: <span class='safe' style = "margin-left: 30px; color: #03fc1c;" >Great! You Gave a Positive Review...</span></h1>
 				{% elif prediction==0 %}
-				<img src="/static/images/red.png" style="margin-left: 240px; margin-top: 20px; border: 9px red solid">
-					<h1 style="margin-left: 30px;">Prediction: <span class='danger'>Oops! You Enterd a Negative Review.... </span></h1>
+				<img src="/static/images/red.png" class = "smiley">
+					<h1 style="margin-left: 20px;">Prediction: <span class='danger'>Oops! You Enterd a Negative Review.... </span></h1>
 				{% endif %}
 			</div>
 	    </div>
